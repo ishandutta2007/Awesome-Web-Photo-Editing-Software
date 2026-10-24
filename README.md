@@ -74,7 +74,7 @@ The table below catalogs leading hosted and cloud-native photo editing platforms
 
 Curated open-source browser photo editors, canvas drawing suites, and WebAssembly image processing libraries, **sorted in descending order by GitHub stargazers count**.
 
-| 📦 Repository | ⭐ GitHub Stars | 📜 License | 🛠️ Tech Stack | 🎯 Focus Area |
+| 📦 Repository | ⭐ GitHub_Stars | 📜 License | 🛠️ Tech Stack | 🎯 Focus Area |
 |:---|:---:|:---:|:---|:---|
 | **[Graphite](https://github.com/GraphiteEditor/Graphite)** | <a href="https://github.com/GraphiteEditor/Graphite/stargazers"><img src="https://img.shields.io/github/stars/GraphiteEditor/Graphite?style=social&color=white" alt="Graphite Stars" /></a> | Apache-2.0 | Rust, WebAssembly, WebGPU, Vue | Procedural node-based 2D graphics & non-destructive photo editor suite |
 | **[Cropper.js](https://github.com/fengyuanchen/cropperjs)** | <a href="https://github.com/fengyuanchen/cropperjs/stargazers"><img src="https://img.shields.io/github/stars/fengyuanchen/cropperjs?style=social&color=white" alt="Cropperjs Stars" /></a> | MIT | JavaScript, HTML5 Canvas | Battle-tested image cropping, rotating, scaling, and canvas transformation |
