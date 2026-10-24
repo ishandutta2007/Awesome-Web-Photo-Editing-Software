@@ -1,6 +1,6 @@
 # Awesome-Web-Photo-Editing-Software
 
-# Top Web Photo Editing Software Ecosystem
+## Top Web Photo Editing Software Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Browser-Native Editing, Self-Hosted Privacy & Layer-Based Non-Destructive Workflows*  
