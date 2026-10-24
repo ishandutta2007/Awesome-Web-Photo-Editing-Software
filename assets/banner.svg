@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e17" />
+      <stop offset="50%" stop-color="#121829" />
+      <stop offset="100%" stop-color="#1a102f" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Blur Filters for Glow Effects -->
+    <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="60" result="blur" />
+    </filter>
+    <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <style>
+      @keyframes float1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1.5deg); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(14px) rotate(-1.5deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.12); }
+      }
+      @keyframes dashFlow {
+        from { stroke-dashoffset: 200; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes shimmer {
+        0% { stop-opacity: 0.2; }
+        50% { stop-opacity: 0.8; }
+        100% { stop-opacity: 0.2; }
+      }
+      .floating-pill-1 {
+        animation: float1 6s ease-in-out infinite;
+      }
+      .floating-pill-2 {
+        animation: float2 7s ease-in-out infinite;
+      }
+      .glow-orb-1 {
+        transform-origin: 200px 100px;
+        animation: pulseGlow 8s ease-in-out infinite alternate;
+      }
+      .glow-orb-2 {
+        transform-origin: 1000px 280px;
+        animation: pulseGlow 6s ease-in-out infinite alternate;
+      }
+      .animated-grid {
+        stroke: #38bdf8;
+        stroke-opacity: 0.08;
+        stroke-width: 1;
+      }
+      .flowing-stream {
+        stroke-dasharray: 8 12;
+        animation: dashFlow 20s linear infinite;
+      }
+      .banner-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 46px;
+        letter-spacing: -0.5px;
+        fill: #ffffff;
+      }
+      .banner-subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        letter-spacing: 0.2px;
+        fill: #94a3b8;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="380" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Animated Glowing Background Orbs (Dynamic Aspect) -->
+  <circle class="glow-orb-1" cx="220" cy="90" r="140" fill="#6366f1" filter="url(#glow1)" />
+  <circle class="glow-orb-2" cx="980" cy="270" r="160" fill="#a855f7" filter="url(#glow1)" />
+  <circle cx="620" cy="340" r="110" fill="#06b6d4" opacity="0.25" filter="url(#glow2)" />
+
+  <!-- Geometric Grid & Flow Lines -->
+  <g class="animated-grid">
+    <line x1="80" y1="0" x2="80" y2="380" />
+    <line x1="200" y1="0" x2="200" y2="380" />
+    <line x1="320" y1="0" x2="320" y2="380" />
+    <line x1="880" y1="0" x2="880" y2="380" />
+    <line x1="1000" y1="0" x2="1000" y2="380" />
+    <line x1="1120" y1="0" x2="1120" y2="380" />
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Flowing Curved Graphic Wave -->
+  <path class="flowing-stream" d="M 0,220 Q 300,140 600,240 T 1200,160" fill="none" stroke="url(#primaryGrad)" stroke-width="2" opacity="0.45" />
+  <path class="flowing-stream" d="M 0,260 Q 350,320 700,200 T 1200,280" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.35" />
+
+  <!-- Floating Dynamic Feature Badges (Positioned cleanly outside central text focal zone) -->
+  <g class="floating-pill-1" transform="translate(70, 70)">
+    <rect width="180" height="38" rx="19" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" opacity="0.9" />
+    <circle cx="20" cy="19" r="6" fill="#38bdf8" />
+    <text x="36" y="24" class="pill-text">🎨 Non-Destructive Layers</text>
+  </g>
+
+  <g class="floating-pill-2" transform="translate(950, 65)">
+    <rect width="180" height="38" rx="19" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" opacity="0.9" />
+    <circle cx="20" cy="19" r="6" fill="#a855f7" />
+    <text x="36" y="24" class="pill-text">⚡ WebAssembly &amp; WebGL</text>
+  </g>
+
+  <g class="floating-pill-2" transform="translate(60, 275)">
+    <rect width="195" height="38" rx="19" fill="#1e293b" stroke="#34d399" stroke-width="1.5" opacity="0.9" />
+    <circle cx="20" cy="19" r="6" fill="#34d399" />
+    <text x="36" y="24" class="pill-text">🔒 Privacy &amp; Offline PWA</text>
+  </g>
+
+  <g class="floating-pill-1" transform="translate(935, 275)">
+    <rect width="205" height="38" rx="19" fill="#1e293b" stroke="#fb923c" stroke-width="1.5" opacity="0.9" />
+    <circle cx="20" cy="19" r="6" fill="#fb923c" />
+    <text x="36" y="24" class="pill-text">📁 PSD, RAW &amp; Vector Import</text>
+  </g>
+
+  <!-- Central Foreground Content Card (Solid high-contrast container ensuring zero interference) -->
+  <g transform="translate(200, 105)" filter="url(#shadow)">
+    <!-- Frosted backdrop container -->
+    <rect width="800" height="170" rx="20" fill="#0f172a" fill-opacity="0.82" stroke="#334155" stroke-width="1.2" />
+
+    <!-- Category Pill Tag -->
+    <rect x="290" y="22" width="220" height="26" rx="13" fill="#1e293b" stroke="#6366f1" stroke-width="1" />
+    <text x="400" y="39" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" fill="#818cf8" letter-spacing="1.5">CURATED AWESOME STACK</text>
+
+    <!-- Main Title (Gradient Accent) -->
+    <text x="400" y="95" text-anchor="middle" class="banner-title">
+      Awesome Web Photo Editing
+    </text>
+
+    <!-- Subtitle -->
+    <text x="400" y="133" text-anchor="middle" class="banner-subtitle">
+      Browser-Native SaaS &amp; Open-Source Image Editing Ecosystem
+    </text>
+  </g>
+</svg>
